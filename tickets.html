@@ -8,7 +8,7 @@
     <title>Conferencia BsAs</title>
     <link rel="stylesheet" href="./Style/Style.css">
     <link rel="stylesheet" href="./Style/bootstrap.min.css">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
 </head>
 
 <body>
@@ -76,31 +76,31 @@
             </div>
         </div>
         <br>
-        <form action="" method="POST" class="formulario" id="form">
+        <form class="formulario" id="form">
             <h2 class="conoce text-center">VENTA <br><strong class="oradores">VALOR DEL TICKET $200</strong></h2>
             <br>
             <div class="container-fluid col-7" id="grupoUsuario">
                 <div class="container d-flex mb-3">
                     <label class="form-label"></label>
-                    <input type="text" class="form-control" name="nombre" required id="nombre" placeholder="Nombre">                   
+                    <input type="text" class="form-control" name="nombre"  id="nombre" placeholder="Nombre">                   
                     <label class="p-2 form-label"></label>
-                    <input type="text" class="form-control"  name="apellido" required id="apellido" placeholder="Apellido">
+                    <input type="text" class="form-control"  name="apellido"  id="apellido" placeholder="Apellido">
                     <p class="formularioIncorrecto"> Dato invalido</p>                  
                 </div>
                 <div class="container d-flex mb-3">
                     <label class="form-label"></label>
-                    <input type="email" class="form-control"  name="email" required id="email" placeholder="Email">
+                    <input type="text" class="form-control"  name="email"  id="email" placeholder="Email">
                 </div>
                 <div class="container d-flex mb-3">
                     <label class="form-label"></label>
-                    <input id="cantidadEntrada" type="text" class="form-control" name="cantidad" required placeholder="Cantidad">
+                    <input id="cantidadEntrada" type="text" class="form-control" name="cantidad" placeholder="Cantidad">
                     <label class="p-2 form-label"></label>
                     <select required id="categoriaSelect" name="categoria" class="form-select">
-                        <option selected value="--Elija una categoria--">--Elija una categoria--</option>
-                        <option value="0">Sin Categoria</option>
-                        <option value="1">Estudiante</option>
-                        <option value="2">Trainee</option>
-                        <option value="3">Junior</option>
+                        <option selected value="0">--Elija una categoria--</option>
+                        <option value="1">Sin Categoria</option>
+                        <option value="2">Estudiante</option>
+                        <option value="3">Trainee</option>
+                        <option value="4">Junior</option>
                     </select>
                 </div>
                 <div class="container">
@@ -147,7 +147,7 @@
     </footer>
     <script src="./JS/bootstrap.min.js"></script>
     <script src="./JS/index.js"></script>
-    <script src="https://kit.fontawesome.com/745bc65868.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>
