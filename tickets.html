@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conferencia BsAs</title>
+    <link rel="stylesheet" href="./Style/Style.css">
+    <link rel="stylesheet" href="./Style/bootstrap.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="ancho navbar navbar-expand-xl fixed-top" style="background-color: rgb(69, 70, 70);">
+            <div class="container-fluid col-11">
+                <div class="alinear">
+                    <a class="logo" href="#">
+                        <img src="../Proyecto-TP/Img/codoacodo.png" alt="Logo" width="150px">
+                    </a>
+                    <h1 class="text-light">Conf Bs As</h1>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 200px;">
+                        <li class="nav-item">
+                            <a class="nav-link link-light" href="#conferencia">La conferencia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-light" href="#oradores">Los oradores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-light" href="#lugar">El lugar y la fecha</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-light" href="#convertite">Conviertete en orador</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-success" href="./tickets.html" target="_blank">Comprar Tickets</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <br><br><br><br><br>
+        <div class="container fluid d-flex justify-content-center text-center">
+            <div class="card border-primary mx-2" style="max-width: 18rem;">
+                <div class="card-header bg-primary text-light ">Estudiante</div>
+                <div class="card-body text-dark">
+                    <h5 class="card-title">Tiene un descuento</h5>
+                    <h3>80%</h3>
+                    <p class="card-text text-black-50">* presentar documentación</p>
+                </div>
+            </div>
+            <div class="card border-info mx-2" style="max-width: 18rem;">
+                <div class="card-header bg-info text-light ">Trainee</div>
+                <div class="card-body text-dark">
+                    <h5 class="card-title">Tiene un descuento</h5>
+                    <h3>50%</h3>
+                    <p class="card-text text-black-50">* presentar documentación</p>
+                </div>
+            </div>
+            <div class="card border-warning mx-2" style="max-width: 18rem;">
+                <div class="card-header bg-warning text-light ">Junior</div>
+                <div class="card-body text-dark">
+                    <h5 class="card-title">Tiene un descuento</h5>
+                    <h3>15%</h3>
+                    <p class="card-text text-black-50">* presentar documentación</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <form action="" method="POST" class="formulario" id="form">
+            <h2 class="conoce text-center">VENTA <br><strong class="oradores">VALOR DEL TICKET $200</strong></h2>
+            <br>
+            <div class="container-fluid col-7" id="grupoUsuario">
+                <div class="container d-flex mb-3">
+                    <label class="form-label"></label>
+                    <input type="text" class="form-control" name="nombre" required id="nombre" placeholder="Nombre">                   
+                    <label class="p-2 form-label"></label>
+                    <input type="text" class="form-control"  name="apellido" required id="apellido" placeholder="Apellido">
+                    <p class="formularioIncorrecto"> Dato invalido</p>                  
+                </div>
+                <div class="container d-flex mb-3">
+                    <label class="form-label"></label>
+                    <input type="email" class="form-control"  name="email" required id="email" placeholder="Email">
+                </div>
+                <div class="container d-flex mb-3">
+                    <label class="form-label"></label>
+                    <input id="cantidadEntrada" type="text" class="form-control" name="cantidad" required placeholder="Cantidad">
+                    <label class="p-2 form-label"></label>
+                    <select required id="categoriaSelect" name="categoria" class="form-select">
+                        <option selected value="--Elija una categoria--">--Elija una categoria--</option>
+                        <option value="0">Sin Categoria</option>
+                        <option value="1">Estudiante</option>
+                        <option value="2">Trainee</option>
+                        <option value="3">Junior</option>
+                    </select>
+                </div>
+                <div class="container">
+                    <div id="totalCompra" class="alert alert-primary " role="alert">
+                        Total a Pagar: $
+                    </div>
+                </div>
+                <div class="fluid d-flex justify-content-center text-center">
+                    <div class="container col-6 d-grid gap-2 mx-auto">
+                        <button class="btn" style="color: white; background-color: rgb(129, 183, 97);"
+                        type="button" id="borrar">Borrar</button>
+                    </div>
+                    <div class="container col-6 d-grid gap-2 mx-auto">
+                        <button class="btn" style="color: white; background-color: rgb(129, 183, 97);"
+                        type="submit" id="botonResumen">Resumen</button>
+                    </div>
+                </div>
+            </div>
+        </form>           
+    </main>
+    <p class="alerta" id="alerta"></p>
+    <br>
+    <footer class="navbar footer">
+        <div class="container text-center ">
+            <div class="col-12 ">
+                <a href="./footer.html" target="_blank"
+                class="linksfinales me-5 link-light link-underline link-underline-opacity-0">Preguntas
+                frecuentes</a>
+                <a href="./footer.html" target="_blank"
+                class="linksfinales me-5 link-light link-underline link-underline-opacity-0">Contáctanos</a>
+                <a href="./footer.html" target="_blank"
+                class="linksfinales me-5 link-light link-underline link-underline-opacity-0">Prensa</a>
+                <a href="./footer.html" target="_blank"
+                class="linksfinales me-5 link-light link-underline link-underline-opacity-0">Conferencias</a>
+                <a href="./footer.html" target="_blank"
+                class="linksfinales me-5 link-light link-underline link-underline-opacity-0">Términos y
+                condiciones</a>
+                <a href="./footer.html" target="_blank"
+                class="linksfinales me-5 link-light link-underline link-underline-opacity-0">Privaciodad</a>
+                <a href="./footer.html" target="_blank"
+                class="linksfinales me-5 link-light link-underline link-underline-opacity-0">Estudiantes</a>
+            </div>
+        </div>
+    </footer>
+    <script src="./JS/bootstrap.min.js"></script>
+    <script src="./JS/index.js"></script>
+    <script src="https://kit.fontawesome.com/745bc65868.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
